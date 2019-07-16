@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GridDemo2</title>
+    <style>
+        .wrapper {
+            display: grid;
+            /* grid-template-columns: 1fr 2fr 1fr; */
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1em;
+            /* grid-auto-rows: 100px; */
+            grid-auto-rows: minmax(100px, auto);
+            justify-content: center;
+        }
+        
+        .wrapper>div {
+            background: #eee;
+            padding: 1em;
+        }
+        
+        .wrapper>div:nth-child(odd) {
+            background: #ddd;
+        }
+        
+        .nested {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 100px;
+            grid-gap: 1em
+        }
+        
+        .nested>div {
+            border: #333 solid 1px;
+            padding: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div>
+            Lorem ipsum dolor sit.
+        </div>
+        <div class="nested">
+            <div>Lorem.</div>
+            <div>Lorem.</div>
+            <div>Lorem.</div>
+            <div>Lorem.</div>
+            <div>Lorem.</div>
+            <div>Lorem.</div>
+            <div>Lorem.</div>
+            <div>Lorem.</div>
+            <div>Lorem.</div>
+            <div>Lorem.</div>
+            <div>Lorem.</div>
+            <div>Lorem.</div>
+        </div>
+        <div>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa reiciendis magnam non eos, corrupti dicta unde corporis aut? Adipisci odio est consequatur eum officia, quae, aliquam facere eius earum laboriosam natus eos aliquid animi quaerat sunt inventore
+            provident repellat blanditiis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore voluptas at dolor odit rerum eveniet tenetur culpa. Eius voluptatum expedita neque fuga itaque autem accusamus doloremque quasi aspernatur iste
+            adipisci voluptatem, ipsam, cum magni similique vel commodi quibusdam soluta illum.
+        </div>
+        <div>
+            Lorem ipsum dolor sit.
+        </div>
+        <div>
+            Lorem ipsum dolor sit.
+        </div>
+    </div>
+
+</body>
+
+</html>
